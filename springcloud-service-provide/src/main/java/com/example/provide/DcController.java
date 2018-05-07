@@ -15,6 +15,7 @@ public class DcController {
     public String dc() {
         String services = "Services: " + discoveryClient.getServices();
         System.out.println(services);
+//        List<ServiceInstance> ins = discoveryClient.getServices();
         return services;
     }
 

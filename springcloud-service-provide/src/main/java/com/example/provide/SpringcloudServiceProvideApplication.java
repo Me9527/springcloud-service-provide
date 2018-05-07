@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("com.example.provide.**")     //组件扫描
+@ComponentScan("com.*.**")     //组件扫描
 @EnableDiscoveryClient          //激活DiscoveryClient实现
 @SpringBootApplication
 public class SpringcloudServiceProvideApplication {
