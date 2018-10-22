@@ -23,7 +23,7 @@ public class ProductImpl implements ProductMapper {
 
     @Override
     public Product getProduct(Long id) {
-        List<Product> products = jdbcTemplate.query("select ID, NAME, descrpit, PRICE from P_PRODUCT where ID = ? ", new Object[]{id}, new BeanPropertyRowMapper(Product.class));
+        List<Product> products = jdbcTemplate.query("select ID, NAME, descript, PRICE from P_PRODUCT where ID = ? ", new Object[]{id}, new BeanPropertyRowMapper(Product.class));
         if(products != null && products.size() > 0){
         	Product p = products.get(0);
             return p;
@@ -34,7 +34,7 @@ public class ProductImpl implements ProductMapper {
     
     @Override
     public List<Product> getAllProduct(){
-        List<Product> products = jdbcTemplate.query("select ID, NAME, descrpit, PRICE from P_PRODUCT ", new BeanPropertyRowMapper(Product.class));
+        List<Product> products = jdbcTemplate.query("select ID, NAME, descript, PRICE from P_PRODUCT ", new BeanPropertyRowMapper(Product.class));
         return products;
     }
     
