@@ -44,8 +44,8 @@ public class ProductController {
     }
     
     @GetMapping("/addProduct2")
-    public void addProduct2(@RequestParam("name") String name, @RequestParam("descrpit") String descrpit, @RequestParam("price") BigDecimal price){
-    	Product product = new Product(name, descrpit, price) ;
+    public void addProduct2(@RequestParam("name") String name, @RequestParam("descript") String descript, @RequestParam("price") BigDecimal price){
+    	Product product = new Product(name, descript, price) ;
     	productService.addProduct(product);
     }
 }
